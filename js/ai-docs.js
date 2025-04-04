@@ -1,6 +1,13 @@
 // ai-docs.js
 
+// GitHub Pages의 baseURL을 감지하는 함수
+function getBaseUrl() {
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    return isGitHubPages ? '/HTML' : '';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    const baseUrl = getBaseUrl();
     const links = document.querySelectorAll('.sidebar a');
     const sections = document.querySelectorAll('.step');
     
@@ -69,6 +76,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // 모든 이미지에 클릭 이벤트 추가
     const images = document.querySelectorAll('.step-image img');
     images.forEach(img => {
+        // GitHub Pages 환경에서 이미지 경로 수정
+        if (baseUrl) {
+            const currentSrc = img.getAttribute('src');
+            if (currentSrc.startsWith('../../../')) {
+                img.src = baseUrl + currentSrc.substring(8);
+            }
+        }
+        
         img.style.cursor = 'pointer';
         img.addEventListener('click', function() {
             openImageInNewWindow(this.src);

@@ -3,6 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>da8171_Github-Manual</title>
+    <script>
+        // GitHub Pages의 baseURL을 감지하는 함수
+        function getBaseUrl() {
+            const isGitHubPages = window.location.hostname.includes('github.io');
+            return isGitHubPages ? '/HTML' : '';
+        }
+        
+        // 리소스 경로 수정
+        window.addEventListener('DOMContentLoaded', function() {
+            const baseUrl = getBaseUrl();
+            if (baseUrl) {
+                document.querySelectorAll('link[rel="stylesheet"], script[src], link[rel="icon"], link[rel="shortcut icon"]').forEach(el => {
+                    const currentPath = el.getAttribute('href') || el.getAttribute('src');
+                    if (currentPath.startsWith('../../../')) {
+                        const newPath = baseUrl + currentPath.substring(8);
+                        if (el.hasAttribute('href')) el.href = newPath;
+                        if (el.hasAttribute('src')) el.src = newPath;
+                    }
+                });
+            }
+        });
+    </script>
     <link rel="icon" href="../../../image/favicon/x-As.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../../../image/favicon/x-As.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../../css/ai-docs.css">
