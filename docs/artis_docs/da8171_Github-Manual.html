@@ -32,10 +32,52 @@
                 <div class="step-title">0️⃣ 자동 업로드 설정하기</div>
                 <div class="step-content">
                     <div class="step-description">
-                        <h3>B:/HTML 폴더 자동 업로드</h3>
-                        <p>B:/HTML 폴더를 GitHub에 자동으로 업로드하려면 PowerShell 스크립트를 사용할 수 있습니다. 이 스크립트는 클릭 한 번으로 실행할 수 있도록 .exe 파일로 변환할 수 있습니다.</p>
-                        <h4>PowerShell 스크립트 예시:</h4>
-                        <pre><code>
+                        <h3>H:/HTML 폴더 자동 업로드</h3>
+                        <p>H:/HTML 폴더를 GitHub에 자동으로 업로드하려면 PowerShell 스크립트를 사용할 수 있습니다.</p>
+                        
+                        <h4>PowerShell 스크립트 실행 가이드</h4>
+                        
+                        <h5>1. 초기 설정 (최초 1회만 실행)</h5>
+                        <p>PowerShell을 관리자 권한으로 실행한 후:</p>
+                        <div class="code-block">
+                            <pre><code>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</code></pre>
+                        </div>
+                        <p>실행 후 'Y' 입력하여 승인</p>
+
+                        <h5>2. git-sync.ps1 스크립트 실행 방법</h5>
+                        
+                        <p>방법 1: PowerShell에서 직접 실행</p>
+                        <ol>
+                            <li>PowerShell 실행</li>
+                            <li>B 드라이브로 이동: <code>cd B:\</code></li>
+                            <li>스크립트 실행: <code>.\git-sync.ps1</code></li>
+                        </ol>
+
+                        <p>방법 2: 파일 우클릭으로 실행</p>
+                        <ol>
+                            <li><code>git-sync.ps1</code> 파일 우클릭</li>
+                            <li>"PowerShell로 실행" 선택</li>
+                        </ol>
+
+                        <h5>3. 주의사항</h5>
+                        <ul>
+                            <li>스크립트 실행 전 반드시 H 드라이브의 작업 내용을 B 드라이브로 복사해야 함</li>
+                            <li>스크립트는 B:\HTML 폴더의 변경사항만 GitHub에 업로드함</li>
+                            <li>실행 결과를 확인한 후 Enter 키를 눌러 창 닫기</li>
+                        </ul>
+
+                        <h5>4. 스크립트 동작 순서</h5>
+                        <ol>
+                            <li>HTML 폴더로 자동 이동</li>
+                            <li>변경된 파일 확인</li>
+                            <li>변경사항 자동 커밋</li>
+                            <li>GitHub 저장소에 자동 업로드</li>
+                        </ol>
+
+                        <h4>수동으로 실행하기</h4>
+                        <pre><code># H:/HTML 폴더에서 B:/HTML 폴더로 복사
+xcopy H:\HTML B:\HTML /E /Y
+
 # B:/HTML 폴더로 이동
 cd B:/HTML
 
@@ -52,18 +94,8 @@ git add .
 git commit -m "Manual update"
 
 # GitHub에 푸시
-git push -u origin main
-                        </code></pre>
-                        <h4>스크립트를 .exe 파일로 변환:</h4>
-                        <p>PowerShell 스크립트를 .exe 파일로 변환하려면 PS2EXE 모듈을 사용할 수 있습니다.</p>
-                        <pre><code>
-# PS2EXE 모듈 설치
-Install-Module -Name PS2EXE
-
-# 스크립트를 .exe 파일로 변환
-Invoke-PS2EXE -InputFile "path\to\your\script.ps1" -OutputFile "path\to\your\script.exe"
-                        </code></pre>
-                        <p>이렇게 하면 script.exe 파일을 클릭하여 B:/HTML 폴더를 GitHub에 업로드할 수 있습니다.</p>
+git push -u origin main</code_block_to_apply_changes_from>
+                        </pre>
                     </div>
                 </div>
             </div>
