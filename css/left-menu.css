@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+/* 메뉴 컨테이너 */
+.menu-container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 메뉴 타이틀 */
+.menu-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* 메뉴 리스트 */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 메뉴 아이템 */
+.menu-item {
+    margin-top: 10px;
+}
+
+/* 메뉴 토글 (부모 메뉴) */
+.menu-toggle {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.menu-toggle:hover {
+    background-color: #d0d0d0;
+}
+
+/* 서브메뉴 */
+.submenu {
+    list-style: none;
+    padding-left: 15px;
+    display: none;  /* 기본적으로 숨김 */
+}
+
+.submenu li {
+    padding: 5px 0;
+}
+
+.submenu a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.submenu a:hover {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+/* 아이콘 크기 조절 */
+.mm_icon-01 {
+    width: 24px; /* 원하는 너비로 조절 */
+    height: 24px; /* 원하는 높이로 조절 */
+    vertical-align: middle; /* 텍스트와 수직 정렬 */
+  }
+  
+  .icon-24px {
+    width: 16px; /* 원하는 너비로 조절 */
+    height: 16px; /* 원하는 높이로 조절 */
+    vertical-align: middle; /* 텍스트와 수직 정렬 */
+  }
+  
+  /* waveon 아이콘 크기 조절 */
+  .icon-waveon {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+  }
+

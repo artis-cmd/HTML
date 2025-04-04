@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Left Bottom Section</title>
+    <link rel="stylesheet" href="../css/sidebar.css">  <!-- 새로운 CSS -->
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            height: 100vh; /* 💡 전체 높이 설정 */
+            overflow-y: auto; /* 🚨 스크롤 적용 */
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .menu-container {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-container li {
+            margin: 5px 0;
+            font-size: 14px;  /* 기존보다 약간 작게 조정 -> 14px */
+            font-weight: normal;
+        }
+
+        .menu-container a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+        }
+
+        /* ✅ 마우스 오버 시 색상 변경 */
+        .menu-container a:hover {
+            color: #FF0066; /* 오렌지색 (변경 가능) */
+        }
+
+        .menu-container a img {
+            margin-left: 8px;
+        }
+
+        /* ✅ bottom-frame을 감싸는 컨테이너가 필요하다면 추가 */
+        .bottom-container {
+            height: 100%;
+            overflow-y: auto; /* 💡 내부 내용이 넘칠 경우 스크롤 */
+            padding-bottom: 20px; /* 하단 여백 */
+        }
+
+        /* ✅ bottom-frame 내부 스크롤 활성화 */
+        .bottom-frame iframe {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto; /* 🚨 스크롤 추가 */
+        }
+
+        /* 드롭다운 스타일 */
+        .dropdown {
+            margin: 10px 0;
+        }
+
+        .dropdown-toggle {
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #f4f4f4;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            margin-top: 5px;
+            padding-left: 15px;
+        }
+
+        .dropdown.open .dropdown-content {
+            display: block;
+        }
+
+        .divider {
+            border-bottom: 1px solid #ccc;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="divider"></div>
+    <ul class="menu-container"><a href="../main/m9101_Private-Search.html" target="main-frame">m9101_Private Search ➡️</a></ul>
+    <ul class="menu-container"><a href="../main/m8101_Private-Search.html" target="main-frame">📌 Private 🔍 Search 📚🤖 ➡️ ➡️ ➡️</a></ul>
+    
+    
+    <!-- 📗스프레드시트 / 엑셀 -->
+    <div class="dropdown">
+        <div class="dropdown-toggle">📗Google Spreadsheets / Excel</div>
+        <div class="dropdown-content">
+            <ul class="menu-container">
+                <li><a href="https://docs.google.com/spreadsheets/d/1X9yp2hW3IcpcSvYJ0hNxpTPiesShCqrGIyqAtvK1y-4/edit?gid=0#gid=0" target="main-frame">📌 YouTube - Playlist 📥추출</a></li>
+
+                <li><a href="../main/m2002_Rion-Lecture-Excel.html" target="main-frame">📌 Rion 강좌 정리</a></li>
+                <li><a href="https://docs.google.com/spreadsheets/d/17uFVSouhChILRiJa5LBdAC1K8LR9jFtdWnM8JEx9N_g/edit?gid=1226513071#gid=1226513071" target="main-frame">📌 ましろ List</a></li>
+                <li><a href="../main/m5201_oikawa.html" target="main-frame">📌 난닝구 아저씨 매매 이력 </a></li>
+                <li><a href="https://docs.google.com/spreadsheets/d/1RIe_86_Plc82wsf_Yk1jxxJFq1dT8q53cO425gobxhI/edit?gid=0#gid=0" target="main-frame">📌 옵시디언 - 북트레싱</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+    <!-- GigaFX & DayTrader -->
+    <div class="dropdown">
+        <div class="dropdown-toggle">🏫 GigaFX / 📚 책방 ➕ hBook 🏫</div>
+        <div class="dropdown-content">
+            <ul class="menu-container">
+                <li><a href="../main/m5000_Giga.html" target="main-frame">📌 Giga速FX</a></li>
+                <li><a href="../DayTrader/DT-index.html" target="main-frame">📌 DayTrader</a></li>
+                <li><a href="../hBook/hB1003_Ryoushi-Book01.html" target="main-frame">🔆 Ryoushi-Book_01</a></li>
+   
+                <li><a href="../hBook/hB3102_Zettenkasten-kr.html" target="main-frame">📖 Zettenkasten 책 🗂️🇰🇷</a></li>
+                <li><a href="../hBook/hB3101_obsidian-kor.html" target="main-frame">📖 obsidian 책 ☑️🇰🇷</a></li>
+                <li><a href="../hBook/hB3103_obsidian-jp.html" target="main-frame">📖 obsidian 책 🗾🇯🇵</a></li>
+                <li><a href="../hBook/hB3105_Prompt-kr.html" target="main-frame">📖 Prompt 책 🤖🇰🇷</a></li>
+                <li><a href="../hBook/hb3401_Spreadsheet-yellow-ko.html" target="main-frame">📖 Spreadsheet 책 💚 🇰🇷</a></li>
+                
+                <li><a href="../hBook/hB3301_Presentation-kr.html" target="main-frame">📖 Presentation 책 📢 🇰🇷</a></li>   
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+    <!-- Youtube 강의 -->
+    <div class="dropdown">
+        <div class="dropdown-toggle">📺 Youtube - 講義動画</div>
+        <div class="dropdown-content">
+            <ul class="menu-container">
+                <li><a href="../main/m1101_NEW-Pattern2023.html" target="main-frame">🎥 NEW Pattern 2023</a></li>
+                <li><a href="../main/m1102_1st-STEP.html" target="main-frame">🎥 First STEP - 1Day 10Pips</a></li>
+                <li><a href="../main/m1103_Wave-MA.html" target="main-frame">🎥 短期足の押し目・戻り目</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+    <!-- Hunt Basic 강의 -->
+    <div class="dropdown">
+        <div class="dropdown-toggle">📘 Hunt_Basic 講座</div>
+        <div class="dropdown-content">
+            <ul class="menu-container">
+                <li><a href="../main/m1000_Hunt.html" target="main-frame">　 Hunt 0 ： リオン式 Zone トレードとは</a></li>
+                <li><a href="../main/m1001_Hunt.html" target="main-frame">　 Hunt 1 ： エントリーの基本手順</a></li>
+                <li><a href="../main/m1002_Hunt.html" target="main-frame">　 Hunt 2 ： 利確・損切の基準</a></li>
+                <li><a href="../main/m1003_Hunt.html" target="main-frame">　 Hunt 3 ：  Zone エントリー ＝ 分割エントリー法</a></li>
+                <li><a href="../main/m1004_Hunt.html" target="main-frame">　 Hunt 4 ： ヒゲハントの極意</a></li>
+                <li><a href="../main/m1005_Hunt.html" target="main-frame">　 Hunt 5 ： 小資金で考える資金管理</a></li>
+                <li><a href="../main/m1006_Hunt.html" target="main-frame">　 Hunt 6 ： ヒントでハント！</a></li>
+                <li><a href="../main/m1007_Hunt.html" target="main-frame">　 Hunt 7 ： 自分の壁を壊そう</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+    <!-- Hunt Plus 강의 -->
+    <div class="dropdown">
+        <div class="dropdown-toggle">📕 Hunt_Plus 講座</div>
+        <div class="dropdown-content">
+            <ul class="menu-container">
+                <li><a href="../main/m3001_＋01「エントリー・エグジットのヒント」.html" target="main-frame">　＋01「エントリー・エグジットのヒント」</a></li>
+                <li><a href="../main/m3002_＋02「リオンの環境認識」.html" target="main-frame">　＋02「リオンの環境認識」</a></li>
+                <li><a href="../main/m3003_＋03「大きな流れに巻き込まれた時」.html" target="main-frame">　＋03「大きな流れに巻き込まれた時」</a></li>
+                <li><a href="../main/m3004_＋04「リオンのリアルトレード動画」.html" target="main-frame">　＋04「リオンのリアルトレード動画」</a></li>
+                <li><a href="../main/m3005_＋05「資産構築・月100万へのシミュレーション」.html" target="main-frame">　＋05「資産構築・月 100万へのシミュレーション」</a></li>
+                <li><a href="../main/m3006_＋06「上位時間足から考えるレンジとレンジブレイク」.html" target="main-frame">　＋06「上位時間足から考えるレンジとレンジブレイク」</a></li>
+                <li><a href="../main/m3007_＋07「波に乗る」.html" target="main-frame">　＋07「波に乗る」</a></li>
+                <li><a href="../main/m3008_＋08「MAとの付き合い方」.html" target="main-frame">　＋08「MAとの付き合い方」</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hunt Plus 미완성 강의 -->
+    <div class="dropdown">
+        <div class="dropdown-toggle">🎶 Hunt_Plus 미완성 講座</div>
+        <div class="dropdown-content">
+            <ul class="menu-container">
+                <li><a href="../main/m3009_＋09「リスクの取り方と考え方」.html" target="main-frame">　＋09「リスクの取り方と考え方」</a></li>
+                <li><a href="../main/m3010_＋10「MAの位置とローソク足の関係」.html" target="main-frame">　＋10「MAの位置とローソク足の関係」</a></li>
+                <li><a href="../main/m3011_＋11「負けを受け入れて闘おう」.html" target="main-frame">　＋11「負けを受け入れて闘おう」</a></li>
+                <li><a href="../main/m3012_＋12「勝率を上げて行こう」.html" target="main-frame">　＋12「勝率を上げて行こう」</a></li>
+                <li><a href="../main/m3013_＋13「リオン式エントリーエグジットの復習とちょっとした戦略」.html" target="main-frame">　＋13「リオン式エントリーエグジットの復習とちょっとした戦略」</a></li>
+                <li><a href="../main/m3014_＋14「間違えたら「微益微損」で一旦逃げて立て直そう」.html" target="main-frame">　＋14「間違えたら「微益微損」で一旦逃げて立て直そう」</a></li>
+                <li><a href="../main/m3015_＋15「下値が近いときの考え方」.html" target="main-frame">　＋15「下値が近いときの考え方」</a></li>
+                <li><a href="../main/m3016_＋16「リオンのトレード☆ヒント」.html" target="main-frame">　＋16「リオンのトレード☆ヒント」</a></li>
+                <li><a href="../main/m3017_＋17「リバースPrice Action（プライスアクション）をリオン式で検証してみよう」.html" target="main-frame">　＋17「リバースPrice Action（プライスアクション）をリオン式で検証してみよう」</a></li>
+            </ul>
+        </div>
+    </div>
+    <br><br><br>
+
+    <script>
+        // 드롭다운 토글 기능
+        document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
+            toggle.addEventListener("click", function () {
+                this.parentElement.classList.toggle("open");
+            });
+        });
+    </script>
+
+</body>
+</html>

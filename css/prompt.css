@@ -1,0 +1,152 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #303030;
+    margin: 0;
+    padding: 0;
+}
+
+/* 상단 메뉴 스타일 */
+.top-menu-container {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.top-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.top-menu a {
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+.top-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* 페이지 제목 */
+.page-title {
+    text-align: left;
+    margin-top: 80px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 20px;
+}
+
+/* 검색 컨테이너 */
+.search-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    width: 50%;
+    max-width: 600px;
+    min-width: 300px;
+    margin-bottom: 5px;
+}
+
+.search-box {
+    width: 50%;
+    max-width: 380px;
+    height: 32px;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 검색 결과 요약 */
+.result-summary {
+    margin-top: 8px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.no-results {
+    padding: 0px;
+    margin-top: 5px;
+    background-color: #ffeded;
+    color: #d9534f;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+    display: none;
+}
+
+/* 프롬프트 항목 스타일 */
+.prompt-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.prompt-content {
+    display: none;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* 카테고리 섹션 */
+.category-section {
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-left: 20px;
+    width: 70%;
+    max-width: 900px;
+    min-width: 240px;
+}
+
+/* 복사 버튼 */
+.copy-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.copy-button:hover {
+    background-color: #45a049;
+}
+
+/* 마크다운 섹션 */
+.markdown-section {
+    font-family: monospace;
+    white-space: pre-wrap;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+} 
