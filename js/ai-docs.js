@@ -89,6 +89,26 @@ document.addEventListener('DOMContentLoaded', function() {
             openImageInNewWindow(this.src);
         });
     });
+
+    // 1단계 드롭다운 토글
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            content.classList.toggle('show');
+        });
+    });
+
+    // 2단계 메뉴 토글
+    const level2Toggles = document.querySelectorAll('.level-2');
+    level2Toggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            if (content && content.classList.contains('level-2-content')) {
+                content.classList.toggle('show');
+            }
+        });
+    });
 });
 
 // 이미지를 새 창에서 크게 보기

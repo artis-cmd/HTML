@@ -1,24 +1,34 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', 'Noto Sans KR', sans-serif;
     margin: 0;
     padding: 10px;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
 }
 
 /* 메뉴 컨테이너 */
 .menu-container {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     box-sizing: border-box;
+    background-color: #f8f9fa;
+    border-radius: 8px;
 }
 
 /* 메뉴 타이틀 */
 .menu-title {
     font-size: 20px;
-    font-weight: bold;
-    color: #2c3e50;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #ddd;
+    font-weight: 600;
+    color: #1a73e8;
+    padding: 0 0 12px 0;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e8eaed;
+}
+
+.menu-title img {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+    display: block;
 }
 
 /* 메뉴 리스트 */
@@ -36,58 +46,213 @@ body {
 /* 메뉴 토글 (부모 메뉴) */
 .menu-toggle {
     display: block;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
+    font-size: 0.95em;  /* 1단계 메뉴 크기 */
+    font-weight: 600;
+    color: #3c4043;
     cursor: pointer;
-    padding: 5px 10px;
-    background-color: #e0e0e0;
-    border-radius: 5px;
+    padding: 6px 12px;
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    border-left: 3px solid #1a73e8;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
 }
 
 .menu-toggle:hover {
-    background-color: #d0d0d0;
+    background-color: #f1f3f4;
+    border-left-color: #174ea6;
+    transform: translateX(2px);
 }
 
 /* 서브메뉴 */
 .submenu {
     list-style: none;
-    padding-left: 15px;
-    display: none;  /* 기본적으로 숨김 */
+    padding-left: 18px;
+    display: none;
+    margin-left: 5px;
 }
 
 .submenu li {
-    padding: 5px 0;
+    padding: 3px 0;
 }
 
 .submenu a {
     text-decoration: none;
-    color: #007bff;
-    font-size: 14px;
+    color: #3c4043;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    display: block;
+    padding: 3px 0;
 }
 
 .submenu a:hover {
-    font-weight: bold;
-    color: #0056b3;
+    color: #1a73e8;
+    transform: translateX(2px);
+}
+
+/* 서브메뉴 그룹 스타일 */
+.submenu-group {
+    color: #666;
+    font-size: 0.85em;  /* 2단계 메뉴 크기 */
+    padding: 8px 15px 4px;
+    margin-top: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    position: relative;
+    letter-spacing: 0.3px;
+}
+
+/* 트리 구조 라인 - 서브메뉴 그룹 */
+.submenu-group::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    height: 100%;
+    border-left: 1px solid #dadce0;
+}
+
+.submenu-group::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    width: 10px;
+    border-top: 1px solid #dadce0;
+}
+
+/* 트리 구조 - 일반 항목 */
+.submenu li:not(.submenu-group) {
+    padding-left: 25px;
+    font-size: 0.85em;  /* 일반 메뉴 항목 크기 */
+    position: relative;
+}
+
+.submenu li:not(.submenu-group)::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    width: 12px;
+    border-top: 1px solid #dadce0;
+}
+
+.submenu li:not(.submenu-group)::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -4px;
+    height: calc(100% + 4px);
+    border-left: 1px solid #dadce0;
+}
+
+/* 각 그룹의 마지막 항목 처리 */
+.submenu li:not(.submenu-group):last-child::after {
+    height: 50%;
 }
 
 /* 아이콘 크기 조절 */
 .mm_icon-01 {
-    width: 24px; /* 원하는 너비로 조절 */
-    height: 24px; /* 원하는 높이로 조절 */
-    vertical-align: middle; /* 텍스트와 수직 정렬 */
-  }
-  
-  .icon-24px {
-    width: 16px; /* 원하는 너비로 조절 */
-    height: 16px; /* 원하는 높이로 조절 */
-    vertical-align: middle; /* 텍스트와 수직 정렬 */
-  }
-  
-  /* waveon 아이콘 크기 조절 */
-  .icon-waveon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icon-24px {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.icon-waveon {
     width: 14px;
     height: 14px;
     vertical-align: middle;
-  }
+    margin-right: 4px;
+}
+
+/* 스크롤바 스타일링 */
+body::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바 너비 */
+}
+
+body::-webkit-scrollbar-track {
+    background: #f8f9fa;  /* 스크롤바 트랙 배경 - 더 연한 회색 */
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(26, 115, 232, 0.4);  /* 스크롤바 색상 - 반투명 블루 */
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(26, 115, 232, 0.6);  /* 호버시 약간 진해지는 블루 */
+}
+
+/* 2단계 메뉴 스타일링 */
+.menu-container .level-2 {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3c4043;
+    background-color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin: 4px 0;
+    border-left: 3px solid #1a73e8;  /* 파란색 강조선 */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.menu-container .level-2:hover {
+    background-color: #f8f9fa;
+    border-left-color: #174ea6;
+    transform: translateX(2px);
+}
+
+/* 2단계 하위 메뉴 컨테이너 */
+.menu-container .level-2-content {
+    margin-left: 20px;
+    position: relative;
+    display: none;  /* 기본적으로 숨김 */
+}
+
+.menu-container .level-2-content.show {
+    display: block;  /* .show 클래스가 있을 때 표시 */
+}
+
+/* 2단계 하위 메뉴 연결선 */
+.menu-container .level-2-content::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-left: 1px solid rgba(26, 115, 232, 0.3);  /* 연한 파란색 라인 */
+}
+
+/* 2단계 하위 메뉴 아이템 */
+.menu-container .level-2-content a {
+    position: relative;
+    padding-left: 20px;
+    margin: 4px 0;
+}
+
+.menu-container .level-2-content a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 12px;
+    border-top: 1px solid rgba(26, 115, 232, 0.3);
+}
 

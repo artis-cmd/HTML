@@ -3,98 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Left Bottom Section</title>
-    <link rel="stylesheet" href="../css/sidebar.css">  <!-- 새로운 CSS -->
-    <style>
-        body {
-            margin: 0;
-            padding: 10px;
-            font-family: Arial, sans-serif;
-            height: 100vh; /* 💡 전체 높이 설정 */
-            overflow-y: auto; /* 🚨 스크롤 적용 */
-        }
-
-        h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .menu-container {
-            list-style: none;
-            padding: 0;
-        }
-
-        .menu-container li {
-            margin: 5px 0;
-            font-size: 14px;  /* 기존보다 약간 작게 조정 -> 14px */
-            font-weight: normal;
-        }
-
-        .menu-container a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: normal;
-            display: flex;
-            align-items: center;
-        }
-
-        /* ✅ 마우스 오버 시 색상 변경 */
-        .menu-container a:hover {
-            color: #FF0066; /* 오렌지색 (변경 가능) */
-        }
-
-        .menu-container a img {
-            margin-left: 8px;
-        }
-
-        /* ✅ bottom-frame을 감싸는 컨테이너가 필요하다면 추가 */
-        .bottom-container {
-            height: 100%;
-            overflow-y: auto; /* 💡 내부 내용이 넘칠 경우 스크롤 */
-            padding-bottom: 20px; /* 하단 여백 */
-        }
-
-        /* ✅ bottom-frame 내부 스크롤 활성화 */
-        .bottom-frame iframe {
-            width: 100%;
-            height: 100%;
-            overflow-y: auto; /* 🚨 스크롤 추가 */
-        }
-
-        /* 드롭다운 스타일 */
-        .dropdown {
-            margin: 10px 0;
-        }
-
-        .dropdown-toggle {
-            cursor: pointer;
-            font-weight: bold;
-            background-color: #f4f4f4;
-            padding: 5px 10px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-        }
-
-        .dropdown-content {
-            display: none;
-            margin-top: 5px;
-            padding-left: 15px;
-        }
-
-        .dropdown.open .dropdown-content {
-            display: block;
-        }
-
-        .divider {
-            border-bottom: 1px solid #ccc;
-            margin: 10px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/left-bottom.css">
 </head>
 <body>
     <div class="divider"></div>
-    <ul class="menu-container"><a href="../main/m9101_Private-Search.html" target="main-frame">m9101_Private Search ➡️</a></ul>
-    <ul class="menu-container"><a href="../main/m8101_Private-Search.html" target="main-frame">📌 Private 🔍 Search 📚🤖 ➡️ ➡️ ➡️</a></ul>
+    <ul class="menu-container"><a href="../main/m8101_Private-Search.html" target="main-frame">m8101_ 📌 Private 🔍 Search 📚🤖 ➡️ ➡️ ➡️</a></ul>
     
     
     <!-- 📗스프레드시트 / 엑셀 -->

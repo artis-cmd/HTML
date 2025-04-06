@@ -1,0 +1,134 @@
+/* 기본 스타일 */
+body {
+    margin: 0;
+    padding: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #fff5f7;
+}
+
+.menu-container {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: #3c4043;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    padding: 3px 0;
+    transition: all 0.2s ease;
+}
+
+.menu-container a:hover {
+    color: #e84393;
+    transform: translateX(2px);
+}
+
+/* 드롭다운 스타일 */
+.dropdown {
+    margin: 8px 0;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3c4043;
+    background-color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    border-left: 3px solid #e84393;  /* 진한 핑크 강조선으로 복원 */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle:hover {
+    background-color: #fff5f7;
+    border-left-color: #d63031;  /* 호버시 더 진한 핑크 */
+    transform: translateX(2px);
+}
+
+.dropdown-content {
+    display: none;
+    padding-left: 18px;
+    margin-left: 5px;
+    position: relative;
+}
+
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    height: 100%;
+    border-left: 1px solid rgba(251, 180, 197, 0.5);  /* 더 연한 핑크 라인 */
+}
+
+.dropdown.open .dropdown-content {
+    display: block;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content li {
+    position: relative;
+    padding-left: 35px;
+}
+
+.dropdown-content li::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    width: 12px;
+    border-top: 1px solid rgba(251, 180, 197, 0.5);
+}
+
+.dropdown-content li::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -4px;
+    height: calc(100% + 4px);
+    border-left: 1px solid rgba(251, 180, 197, 0.5);
+}
+
+.dropdown-content li:last-child::after {
+    height: 50%;
+}
+
+.divider {
+    border-bottom: 1px solid rgba(251, 180, 197, 0.5);
+    margin: 8px 0;
+    opacity: 0.5;
+}
+
+/* 스크롤바 스타일링 */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff5f7;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(232, 67, 147, 0.4);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(232, 67, 147, 0.6);
+} 
